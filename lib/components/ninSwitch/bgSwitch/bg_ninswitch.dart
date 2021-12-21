@@ -1,7 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-// import 'package:ninswitchfteam/components/ninSwitch/gameScreen/game_screen.dart';
+//import 'package:ninswitchfteam/components/ninSwitch/buttons/digitalDirectional/digital_joypad.dart';
+import 'package:ninswitchfteam/components/ninSwitch/gameScreen/game_screen.dart';
 
 class BgNinswitch extends StatefulWidget {
   const BgNinswitch({Key? key}) : super(key: key);
@@ -43,40 +44,7 @@ class _BgNinSwitch extends State<BgNinswitch> {
                 ),
               ),
               //child: const GameScreen(),
-              child: Container(
-                margin: const EdgeInsets.only(top: 60),
-                height: 60,
-                width: 60,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    // ignore: prefer_const_literals_to_create_immutables
-                    colors: [
-                      Colors.white,
-                      Color(0xff272B2E),
-                    ],
-                  ),
-                ),
-                child: Container(
-                  margin: EdgeInsets.all(4),
-                  height: 40,
-                  width: 40,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    gradient: LinearGradient(
-                      begin: Alignment.topRight,
-                      end: Alignment.bottomLeft,
-                      // ignore: prefer_const_literals_to_create_immutables
-                      colors: [
-                        Colors.black,
-                        Colors.grey,
-                      ],
-                    ),
-                  ),
-                ),
-              ),
+              child: GameScreen(),
             ),
           ),
         );

@@ -26,35 +26,34 @@ class _AnalogJoypadState extends State<AnalogJoypad> {
             ),
           ),
           child: FractionallySizedBox(
-              widthFactor: 0.9236,
-              heightFactor: 0.9236,
-              child: Container(
-                  decoration: const BoxDecoration(
-                      color: Colors.green, shape: BoxShape.circle),
-                  child: FractionallySizedBox(
-                    widthFactor: 0.9236,
-                    heightFactor: 0.9236,
-                    child: Container(
-                      decoration: const BoxDecoration(
-                        color: Colors.blue,
-                        shape: BoxShape.circle,
-                      ),
-                      child: FractionallySizedBox(
-                        widthFactor: 0.9236,
-                        heightFactor: 0.9236,
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: Colors.yellow,
-                            shape: BoxShape.circle,
-                            border: Border.all(
-                              color: Colors.black,
-                              width: 4,
-                            ),
-                          ),
-                        ),
-                      ),
+            widthFactor: 0.81,
+            heightFactor: 0.81,
+            child: Container(
+              decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                      begin: Alignment.bottomLeft,
+                      end: Alignment.topRight,
+                      colors: [Color(0xff686D70), Color(0xff050F11)]),
+                  shape: BoxShape.circle),
+              child: FractionallySizedBox(
+                widthFactor: 0.9236,
+                heightFactor: 0.9236,
+                child: Container(
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [Color(0xff676A6F), Color(0xff242625)]),
+                    shape: BoxShape.circle,
+                    border: Border.all(
+                      color: Colors.black,
+                      width: 4,
                     ),
-                  ))));
+                  ),
+                ),
+              ),
+            ),
+          ));
     });
   }
 }
